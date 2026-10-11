@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utilities.css" />
+  </head>
+  <body>
+    <div class="tv-container">
+      <!-- <img src="images/crt-tv-2.png" alt="Retro Tv" class="crt-tv-img" /> -->
+
+      <!-- game interface -->
+      <div class="tv-screen-content">
+        <div class="scanlines"></div>
+
+        <!-- Main Game Layout Wrapper -->
+        <main class="arcade-machine">
+          <!-- Section 1 Heading & Sub-Headings-->
+
+          <header class="game-header text-center">
+            <h1 class="game-title">
+              <span class="word-rock">ROCK,</span>
+              <span class="word-paper">PAPER,</span>
+              <span class="word-scissor">SCISSOR</span>
+            </h1>
+          </header>
+
+          <!-- Section 2: Hero Section (The Arena) -->
+          <section class="hero-arena arcade-panel">
+            <!--Player Card-->
+            <div class="fighter-card" id="player-card">
+              <h3>PLAYER 1</h3>
+              <img
+                src="images/player-image.png"
+                alt="Player1"
+                class="pixel-avatar"
+              />
+
+              <div class="players-score">
+                <span id="user-score">SCORE:0</span>
+                <span id="user-win-count">Wins:0</span>
+                <span id="user-loss-count">Loss:0</span>
+                <span id="user-tie-count">Ties:0</span>
+              </div>
+            </div>
+
+            <!-- Match Status & Winner Announcement-->
+            <div class="battle-center text-center">
+              <h3 class="matchup">
+                <span id="player-weapon">X</span>VS<span id="comp-weapon">Y</span>
+              </h3>
+              <h2 class="winner-announcement">WINNER</h2>
+              <span class="round-count"></span>
+            </div>
+                 
+          
+            <!-- CPU CARD-->
+            <div class="fighter-card" id="computer-card">
+              <h3>COMPUTER</h3>
+              <img src="images/AI.png" alt="COMPUTER" class="pixel-avatar" />
+
+              <div class="players-score">
+                <span id="comp-score">SCORE:0</span>
+                <span id="comp-win-count">Wins:0</span>
+                <span id="comp-loss-count">Loss:0</span>
+                <span id="comp-tie-count">Ties:0</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 3: Weapon Selection Window -->
+
+          <section class="weapon-selection">
+            <div class="weapon-grid">
+              <button class="move-btn btn-rock">
+                <img
+                  src="images/Rock.png"
+                  alt="Rock"
+                  class="weapon-icon"
+                  id="rock-img"
+                />
+                <span>ROCK</span>
+              </button>
+
+              <button class="move-btn btn-paper">
+                <img
+                  src="images/paper.png"
+                  alt="Paper"
+                  class="weapon-icon"
+                  id="paper-img"
+                />
+                <span class="word-paper">PAPER</span>
+              </button>
+
+              <button class="move-btn btn-scissor">
+                <img
+                  src="images/scissor.png"
+                  alt="Scissor"
+                  class="weapon-icon"
+                  id="scissor-img"
+                />
+                <span class="word-scissor">SCISSOR</span>
+              </button>
+            </div>
+            <span
+              ><h3 class="selection-prompt text-center">
+                SELECT YOUR WEAPON
+              </h3></span
+            >
+          </section>
+
+          <!--Section 4: Scores & System Controls -->
+          <section class="system-footer">
+            <div class="stats-board">
+              <span> CREDITS: </span>
+              <span class="high-score">HIGH SCORE : </span>
+            </div>
+            <div class="system-controls">
+              <button class="start-btn">START [A]</button>
+              <button class="exit-btn">EXIT[B]</button>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="storage.js"></script>
+  </body>
+</html>
